@@ -1,18 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image'
 
 export default function Navbar() {
     const [isActive, setisActive] = React.useState(false)
+    
+    const data = useStaticQuery(graphql`
+        query {
+            file(relativePath: {eq: "logo.png"}) {
+                childImageSharp {
+                    fixed(width: 50, height: 50) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }
+    `)
 
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <Link className="navbar-item" to="/">
-                    <img
-                        src="https://bulma.io/images/bulma-logo.png"
-                        alt="Logo"
-                        width="112"
-                        height="28"
+            <div className="navbar-brand m-0 p-0">
+                <Link className="ml-2 mt-1" to="/">      
+                    <Img
+                        fixed={data.file.childImageSharp.fixed}
+                        alt=""
                     />
                 </Link>
                 <div

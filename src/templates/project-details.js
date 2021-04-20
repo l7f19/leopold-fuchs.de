@@ -1,13 +1,22 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 export default function ProjectDetails({ data }) {
     const { html } = data.markdownRemark
     const { title, stack, featuredImg } = data.markdownRemark.frontmatter
     return (
         <Layout>
+            <div className="section pt-4 pb-0">
+                <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/projects">Projects</Link></li>
+                        <li class="is-active"><Link to="/">{title}</Link></li>
+                    </ul>
+                </nav>
+            </div>
             <div>
                 <h2>{title}</h2>
                 <h3>{stack}</h3>

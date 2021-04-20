@@ -5,10 +5,17 @@ import Img from 'gatsby-image'
 
 export default function Projects({ data }) {
     const projects = data.allMarkdownRemark.nodes
-    console.log(data)
 
     return (
         <Layout>
+            <div className="section pt-4 pb-0">
+                <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li class="is-active"><Link to="/">Projects</Link></li>
+                    </ul>
+                </nav>
+            </div>
             <h1 class="title">
                 Projects
             </h1>
