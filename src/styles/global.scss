@@ -8,10 +8,11 @@ $grey-dark: #757763;
 $grey-light: #D0D1CD;
 $primary: #c64d32;
 $link: #32abc6;
+//$body-background-color: #363636;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $size-1: 4rem;
-$footer-padding: 2rem;
+$link-hover: #FFFFFF;
 
 // navbar
 $navbar-background-color: #000000;
@@ -22,6 +23,17 @@ $navbar-height: 2.5rem;
 // breadcrumb
 $breadcrumb-item-color: $primary;
 $breadcrumb-item-separator-color: #363636;
+
+// link on homepage
+.keyword {
+    text-decoration: underline;
+}
+
+// footer
+$footer-padding: 2rem;
+//$footer-background-color: $body-background-color;
+$footer-background-color: #363636;
+$footer-color: #FFFFFF;
 
 // Update some of Bulma's component variables
 $control-border-width: 2px;

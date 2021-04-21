@@ -22,7 +22,7 @@ export default function Projects({ data }) {
             <div>
                 {projects.map(project => (
                     <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
-                        <Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />
+                        {/*<Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />*/}
                         <h3>{project.frontmatter.title}</h3>
                     </Link>
                 ))}

@@ -21,7 +21,7 @@ export default function ProjectDetails({ data }) {
                 <h2>{title}</h2>
                 <h3>{stack}</h3>
                 <div>
-                    <Img fluid={featuredImg.childImageSharp.fluid} />
+                    {/*<Img fluid={featuredImg.childImageSharp.fluid} />*/}
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
