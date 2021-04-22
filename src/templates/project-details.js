@@ -1,13 +1,15 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Img from 'gatsby-image'
+//import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 export default function ProjectDetails({ data }) {
     const { html } = data.markdownRemark
     const { title, stack, featuredImg } = data.markdownRemark.frontmatter
     return (
         <Layout>
+            <Seo title={title} />
             <div className="section pt-4 pb-0">
                 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
                     <ul>

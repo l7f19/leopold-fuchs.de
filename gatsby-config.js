@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Leopold Fuchs`,
-    siteUrl: `https://www.leopold-fuchs.de`,
-    description: `A personal portfolio website from Leopold Fuchs`,
+    description: `Hi! I'm Leopold, a computer science student based in Stuttgart, Germany.`,
+    url: "https://leopold-fuchs.de",
+    author: `Leopold Fuchs`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`, 

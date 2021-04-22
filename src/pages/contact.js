@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby';
 import Layout from '../components/layout'
+import Seo from '../components/seo'
 
 export default function Contact() {
     return (
         <Layout>
+            <Seo title="Contact" />
             <div className="section pt-4 pb-0">
                 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
                     <ul>

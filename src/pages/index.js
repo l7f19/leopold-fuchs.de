@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import Seo from '../components/seo'
 
 export default function Home({ data }) {
     return (
         <Layout>
+            <Seo title="Home" />
             <div class="columns is-gapless">
                 <div className="column">
                     <section class="hero is-fullheight is-link">
