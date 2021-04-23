@@ -8,10 +8,10 @@ export default function Cv() {
         <Layout>
             <Seo title="CV" />
             <div className="section pt-4 pb-0">
-                <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>
-                        <li class="is-active"><Link to="/">CV</Link></li>
+                        <li className="is-active"><Link to="/">CV</Link></li>
                     </ul>
                 </nav>
             </div>

@@ -11,11 +11,11 @@ export default function ProjectDetails({ data }) {
         <Layout>
             <Seo title={title} />
             <div className="section pt-4 pb-0">
-                <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/projects">Projects</Link></li>
-                        <li class="is-active"><Link to="/">{title}</Link></li>
+                        <li className="is-active"><Link to="/">{title}</Link></li>
                     </ul>
                 </nav>
             </div>
