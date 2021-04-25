@@ -40,13 +40,11 @@ export default function Home({ data }) {
                             </p>
 
                             <p className="title is-2">
-                                React (Native) | Gatsby | ExpressJS | Google Firebase
-                            </p>
-                             
+                                React (Native) | Gatsby | Express | Firebase
+                            </p>    
                         </div>
                     </div>
                 </section>
-
         </Layout>
     )
 }
