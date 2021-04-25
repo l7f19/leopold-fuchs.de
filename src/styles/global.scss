@@ -11,15 +11,16 @@ $link: #32abc6;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $size-1: 4rem;
+$link-hover: #FFFFFF;
 
 // navbar
 $navbar-background-color: #000000;
 $navbar-item-color: #FFFFFF;
-//$subtitle-color: $navbar-item-color;
 $navbar-height: 2.5rem;
 
 // breadcrumb
 $breadcrumb-item-color: $primary;
+$breadcrumb-item-hover-color: #363636;
 $breadcrumb-item-separator-color: #363636;
 
 // link on homepage
@@ -29,7 +30,6 @@ $breadcrumb-item-separator-color: #363636;
 
 // footer
 $footer-padding: 2rem;
-//$footer-background-color: $body-background-color;
 $footer-background-color: #363636;
 $footer-color: #FFFFFF;
 
