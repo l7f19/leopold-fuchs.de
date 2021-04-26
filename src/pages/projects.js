@@ -1,11 +1,11 @@
 import { Link, graphql } from 'gatsby'
-import React, {useState} from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Img from 'gatsby-image'
 
 export default function Projects({ data }) {
-    const projects = data.allMarkdownRemark.nodes
+    const projects = data.projects.nodes
 
     return (
         <Layout>
@@ -21,13 +21,22 @@ export default function Projects({ data }) {
             <div className="content">
                 <div className="container pt-5">
                     {projects.map((project, index) => (
-                        <div className="tile is-ancestor pb-6">
+                        <div className="tile is-ancestor pb-6 pt-5">
                             <div className="tile is-vertical">
                                 <div className="tile">
                                     <div className="tile is-parent is-vertical">
                                         <article className={`tile is-child notification ${index%2===0 ? "is-link": "is-primary"}`}>
-                                            <p className="subtitle pb-1">Title</p>       
-                                            <p className="title">{project.frontmatter.title}</p>
+                                            <div className="columns">
+                                                <div className="column is-10">
+                                                    <p className="subtitle pb-1">Title</p>
+                                                    <p className="title is-4">{project.frontmatter.title}</p>
+                                                </div>
+                                                <div className="column">
+                                                <a href={project.frontmatter.link} alt="GitHub" target="_blank" rel="noreferrer">
+                                                    <Img className="mt-3" fixed={data.icon.childImageSharp.fixed} />
+                                                </a>
+                                                </div>
+                                            </div>       
                                         </article>
                                         <article className="tile is-child box">
                                             <p className="subtitle pb-1">Stack</p>
@@ -52,7 +61,6 @@ export default function Projects({ data }) {
                                     </article>
                                 </div>
                             </div>
-                            {/*<Img fluid={project.frontmatter.thumb.childImageSharp.fluid} />*/}
                         </div> 
                     ))}
                 </div>  
@@ -63,7 +71,7 @@ export default function Projects({ data }) {
 
 export const query = graphql`
     query Projects {
-        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+        projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
             nodes {
                 html
                 frontmatter {
@@ -72,15 +80,16 @@ export const query = graphql`
                     type
                     progress
                     date
-                    image {
-                        childImageSharp {
-                            fluid {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                      }
+                    link
                 }
                 id
+            }
+        }
+        icon: file(relativePath: {eq: "github.png"}) {
+            childImageSharp {
+                fixed(width: 48, height: 48) {
+                    ...GatsbyImageSharpFixed
+                }
             }
         }
     }

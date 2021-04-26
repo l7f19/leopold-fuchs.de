@@ -15,8 +15,56 @@ export default function Contact() {
                     </ul>
                 </nav>
             </div>
-            <div>
-                <h1>Contact page</h1>
+            <div className="content pb-6">
+                <div className="container">
+                    <section class="hero has-text-centered">
+                        <div class="hero-body">
+                            <p class="title is-2">
+                                You have a question or just want to get in touch?
+                            </p>
+                            <p class="subtitle is-2">
+                                Don't hesitate to contact me!
+                            </p>
+                        </div>
+                    </section>
+
+                    <form
+                        action="https://formspree.io/f/mpzkqaez"
+                        method="POST"
+                    >
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control">
+                                <input class="input is-hovered" type="text" name="name" placeholder="e.g Alex Smith" />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input is-hovered" type="email" name="_replyto" placeholder="e.g. alexsmith@gmail.com" />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea is-hovered" placeholder="e.g. Hello world"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field pt-3">
+                            <div class="control">
+                                <div className="buttons is-centered">
+                                    <Link to="/contact">
+                                        <button class="button is-link is-outlined" type="submit"><div className="pr-5"></div>Send<div className="pl-5"></div></button>
+                                    </Link>
+                                </div>
+                            </div> 
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </Layout>
     )

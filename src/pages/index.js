@@ -38,10 +38,12 @@ export default function Home({ data }) {
                             <p className="title is-2 pt-5 pb-4">
                                 I'm interested in fullstack web/app development and thereby mainly working with following technologies:
                             </p>
-
-                            <p className="title is-2">
-                                React (Native) | Gatsby | Express | Firebase
-                            </p>    
+                            <div class="tags is-justify-content-center">
+                                <span class="tag is-primary is-light is-large mx-4">React (Native)</span>
+                                <span class="tag is-primary is-light is-large mx-4">GatsbyJS</span>
+                                <span class="tag is-primary is-light is-large mx-4">Firebase</span>
+                                <span class="tag is-primary is-light is-large mx-4">ExpressJS</span>
+                            </div>
                         </div>
                     </div>
                 </section>
