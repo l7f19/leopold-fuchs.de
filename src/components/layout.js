@@ -5,7 +5,7 @@ import '../styles/global.scss'
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div className="has-navbar-fixed-top footer-parent">
             <Navbar />
             <div>
                 { children }

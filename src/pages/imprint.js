@@ -8,7 +8,7 @@ export default function Imprint() {
         <Layout>
             <Seo title="Imprint" />
             <div className="section pt-4 pb-0">
-                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
+                <nav className="breadcrumb is-centered pt-6" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li className="is-active"><Link to="/">Imprint</Link></li>

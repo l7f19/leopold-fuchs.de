@@ -18,7 +18,7 @@ export default function Navbar() {
     `)
 
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div className="navbar-brand m-0 p-0">
                 <Link className="ml-2 mt-1" to="/">      
                     <Img

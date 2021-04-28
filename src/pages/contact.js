@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import emailjs from 'emailjs-com'
-import { Formik, Form } from 'formik'
+import { Formik, Form, ErrorMessage, Field } from 'formik'
 import * as yup from 'yup'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -15,6 +15,7 @@ export default function Contact() {
         mail: yup.string().email('Please enter a valid e-mail address!').required('This field is required!'),
         subject: yup.string().required('This field is required!'),
         message: yup.string().required('This field is required!'),
+        accept: yup.bool().oneOf([true], 'You have to agree to the privacy policy!')
     })
     
     const submitHandler = (e) => {
@@ -33,7 +34,7 @@ export default function Contact() {
         <Layout>
             <Seo title="Contact" />
             <div className="section pt-4 pb-0">
-                <nav className="breadcrumb is-centered" aria-label="breadcrumbs">
+                <nav className="breadcrumb is-centered pt-6" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li className="is-active"><Link to="/">Contact</Link></li>
@@ -60,20 +61,29 @@ export default function Contact() {
                             mail: "",
                             subject: "",
                             message: "",
+                            accept: false,
                         }}
                     >
-                        {formik => (
-                            <Form onSubmit={submitHandler}>
-                                <Textfield label="Name" type="text" name="name" placeholder="e.g. Alex Smith" />
-                                <Textfield label="E-Mail" type="text" name="mail" placeholder="e.g. alexsmith@gmail.com" />
-                                <Textfield label="Subject" type="text" name="subject" placeholder="e.g. My message to you" />
-                                <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello world" />
-                                <div class="field pt-3">
-                                    <div class="control">
-                                        <div className="buttons is-centered">
-                                            <button class="button is-link is-outlined" type="submit"><div className="pr-5"></div>Send Message<div className="pl-5"></div></button>
-                                        </div>
-                                    </div> 
+                        {({dirty, isValid})=> (
+                            <Form onSubmit={submitHandler} className="columns is-centered">
+                                <div className="column is-two-thirds">
+                                    <Textfield label="Name" type="text" name="name" placeholder="e.g. Alex Smith" />
+                                    <Textfield label="E-Mail" type="text" name="mail" placeholder="e.g. alexsmith@gmail.com" />
+                                    <Textfield label="Subject" type="text" name="subject" placeholder="e.g. My message to you" />
+                                    <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello world" />
+                                    <div class="field pt-2">
+                                        <label class="checkbox">
+                                            <Field type="checkbox" name="accept" className="mr-3" />I agree to the <a href="/privacy" target="_blank">privacy policy</a>
+                                        </label>
+                                        <p class="help is-danger"><ErrorMessage name="accept" /></p>
+                                    </div>
+                                    <div class="field pt-3">
+                                        <div class="control">
+                                            <div className="buttons is-centered">
+                                                <button class="button is-link is-outlined" type="submit" disabled={!dirty || !isValid}><div className="pr-5"></div>Send Message<div className="pl-5"></div></button>
+                                            </div>
+                                        </div> 
+                                    </div>
                                 </div>
                             </Form>
                         )}

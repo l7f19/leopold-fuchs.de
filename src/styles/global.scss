@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // override Bulma's global variables
 $family-sans-serif: "IBM Plex Sans", sans-serif;
@@ -11,7 +12,6 @@ $link: #32abc6;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $size-1: 4rem;
-$link-hover: #FFFFFF;
 
 // navbar
 $navbar-background-color: #000000;
@@ -23,15 +23,51 @@ $breadcrumb-item-color: $primary;
 $breadcrumb-item-hover-color: #363636;
 $breadcrumb-item-separator-color: #363636;
 
-// link on homepage
+// home
 .keyword {
     text-decoration: underline;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-80 { font-size: 80px; }
+
+.indicator-down {
+    animation: down 1s ease infinite;
+}
+
+@keyframes down {
+    50% {
+        transform: translateY(-25%);
+    }
+}
+
+.indicator-up {
+    animation: down 1s ease infinite;
+}
+
+@keyframes up {
+    50% {
+        transform: translateY(-25%);
+      }
 }
 
 // footer
 $footer-padding: 2rem;
 $footer-background-color: #363636;
 $footer-color: #FFFFFF;
+.sticky-footer {
+    position: sticky;
+    top: 100%;
+}
+.footer-parent {
+    min-height: 100vh;
+}
+.white-hover:hover{
+    color: #FFFFFF;
+}
 
 // Update some of Bulma's component variables
 $control-border-width: 2px;
