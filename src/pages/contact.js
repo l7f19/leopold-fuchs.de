@@ -1,9 +1,34 @@
 import React from 'react'
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
+import emailjs from 'emailjs-com'
+import { Formik, Form } from 'formik'
+import * as yup from 'yup'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import { Textfield } from '../components/textfield'
+
 
 export default function Contact() {
+
+    const validate = yup.object({
+        name: yup.string().required('This field is required!'),
+        mail: yup.string().email('Please enter a valid e-mail address!').required('This field is required!'),
+        subject: yup.string().required('This field is required!'),
+        message: yup.string().required('This field is required!'),
+    })
+    
+    const submitHandler = (e) => {
+        e.preventDefault()
+        emailjs.sendForm('service_o3d5yxn', 'template_e2pk97l', e.target, 'user_bDbMugp8DH1QCr8vtzlMw')
+          .then((result) => {
+              console.log(result.text)
+          }, (error) => {
+              console.log(error.text)
+          });
+        e.target.reset()
+    }
+    
+
     return (
         <Layout>
             <Seo title="Contact" />
@@ -28,42 +53,31 @@ export default function Contact() {
                         </div>
                     </section>
 
-                    <form
-                        action="https://formspree.io/f/mpzkqaez"
-                        method="POST"
+                    <Formik 
+                        validationSchema={validate}
+                        initialValues={{
+                            name: "",
+                            mail: "",
+                            subject: "",
+                            message: "",
+                        }}
                     >
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <div class="control">
-                                <input class="input is-hovered" type="text" name="name" placeholder="e.g Alex Smith" />
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Email</label>
-                            <div class="control">
-                                <input class="input is-hovered" type="email" name="_replyto" placeholder="e.g. alexsmith@gmail.com" />
-                            </div>
-                        </div>
-
-                        <div class="field">
-                            <label class="label">Message</label>
-                            <div class="control">
-                                <textarea class="textarea is-hovered" placeholder="e.g. Hello world"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="field pt-3">
-                            <div class="control">
-                                <div className="buttons is-centered">
-                                    <Link to="/contact">
-                                        <button class="button is-link is-outlined" type="submit"><div className="pr-5"></div>Send<div className="pl-5"></div></button>
-                                    </Link>
+                        {formik => (
+                            <Form onSubmit={submitHandler}>
+                                <Textfield label="Name" type="text" name="name" placeholder="e.g. Alex Smith" />
+                                <Textfield label="E-Mail" type="text" name="mail" placeholder="e.g. alexsmith@gmail.com" />
+                                <Textfield label="Subject" type="text" name="subject" placeholder="e.g. My message to you" />
+                                <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello world" />
+                                <div class="field pt-3">
+                                    <div class="control">
+                                        <div className="buttons is-centered">
+                                            <button class="button is-link is-outlined" type="submit"><div className="pr-5"></div>Send Message<div className="pl-5"></div></button>
+                                        </div>
+                                    </div> 
                                 </div>
-                            </div> 
-                        </div>
-                    </form>
-
+                            </Form>
+                        )}
+                    </Formik>
                 </div>
             </div>
         </Layout>
