@@ -9,6 +9,7 @@ import { Textfield } from '../components/textfield'
 
 
 export default function Contact() {
+    const [modalActive, setModalActive] = React.useState(false)
 
     const validate = yup.object({
         name: yup.string().required('This field is required!'),
@@ -27,6 +28,7 @@ export default function Contact() {
               console.log(error.text)
           });
         e.target.reset()
+        setModalActive(true)
     }
     
 
@@ -88,6 +90,21 @@ export default function Contact() {
                             </Form>
                         )}
                     </Formik>
+                </div>
+            </div>
+            <div className={`modal ${modalActive ? "is-active" : ""}`}>
+                <div className="modal-background" onClick={() => setModalActive(false)}></div>
+                <div className="modal-card">
+                    <header className="modal-card-head">
+                        <p className="modal-card-title">Success</p>
+                        <button className="delete" aria-label="close" onClick={() => setModalActive(false)}></button>
+                    </header>
+                    <section className="modal-card-body">
+                        <p>Your message has been successfully submitted! I will respond as soon as possible.</p>
+                    </section>
+                    <footer className="modal-card-foot has-text-centered">
+                        <button className="button is-success" onClick={() => setModalActive(false)}>Close</button>
+                    </footer>
                 </div>
             </div>
         </Layout>

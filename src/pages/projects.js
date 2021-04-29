@@ -50,7 +50,7 @@ export default function Projects({ data }) {
                                         </article>
                                         <article className="tile is-child box">
                                             <p className="subtitle">Current progress</p>
-                                            <progress className="progress" value={project.frontmatter.progress} max="100"></progress>
+                                            <progress className={`progress ${index%2===0 ? "is-primary": "is-link"}`} value={project.frontmatter.progress} max="100"></progress>
                                         </article>
                                     </div>
                                 </div>
