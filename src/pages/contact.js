@@ -30,12 +30,11 @@ export default function Contact() {
         e.target.reset()
         setModalActive(true)
     }
-    
 
     return (
         <Layout>
             <Seo title="Contact" />
-            <div className="section pt-4 pb-0">
+            <div className="section pt-5 pb-0">
                 <nav className="breadcrumb is-centered pt-6" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>

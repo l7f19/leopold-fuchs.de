@@ -5,7 +5,6 @@
 
 // override Bulma's global variables
 $family-sans-serif: "IBM Plex Sans", sans-serif;
-$grey-dark: #757763;
 $grey-light: #D0D1CD;
 $primary: #c64d32;
 $link: #32abc6;
@@ -28,12 +27,14 @@ $breadcrumb-item-separator-color: #363636;
     text-decoration: underline;
 }
 
+// icon sizes
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 .material-icons.md-80 { font-size: 80px; }
 
+// arrow animation
 .indicator-down {
     animation: down 1s ease infinite;
 }
@@ -74,5 +75,6 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+// import bulma
 @import "~bulma/bulma.sass";
 @import '~bulma-timeline';

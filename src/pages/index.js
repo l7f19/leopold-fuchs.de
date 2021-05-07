@@ -52,9 +52,9 @@ export default function Home({ data }) {
                             </p>
                             <div className="tags is-justify-content-center">
                                 <span className="tag is-primary is-light is-large mx-4">React (Native)</span>
-                                <span className="tag is-primary is-light is-large mx-4">GatsbyJS</span>
-                                <span className="tag is-primary is-light is-large mx-4">Firebase</span>
-                                <span className="tag is-primary is-light is-large mx-4">ExpressJS</span>
+                                <span className="tag is-primary is-light is-large mx-4">Gatsby</span>
+                                <span className="tag is-primary is-light is-large mx-4">Node.js + Express</span>
+                                <span className="tag is-primary is-light is-large mx-4">MongoDB</span>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@ export default function Projects({ data }) {
     return (
         <Layout>
             <Seo title="Projects" />
-            <div className="section pt-4 pb-0">
+            <div className="section pt-5 pb-0">
                 <nav className="breadcrumb is-centered pt-6" aria-label="breadcrumbs">
                     <ul>
                         <li><Link to="/">Home</Link></li>
@@ -50,7 +50,7 @@ export default function Projects({ data }) {
                                         </article>
                                         <article className="tile is-child box">
                                             <p className="subtitle">Current progress</p>
-                                            <progress className={`progress ${index%2===0 ? "is-primary": "is-link"}`} value={project.frontmatter.progress} max="100"></progress>
+                                            <progress className={`progress ${index%2===0 ? "is-link": "is-primary"}`} value={project.frontmatter.progress} max="100"></progress>
                                         </article>
                                     </div>
                                 </div>
