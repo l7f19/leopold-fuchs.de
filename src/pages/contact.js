@@ -81,7 +81,7 @@ export default function Contact() {
                                     <div class="field pt-3">
                                         <div class="control">
                                             <div className="buttons is-centered">
-                                                <button class="button is-link is-outlined" type="submit" disabled={!dirty || !isValid}><div className="pr-5"></div>Send Message<div className="pl-5"></div></button>
+                                                <button className="button is-link is-outlined" type="submit" disabled={!dirty || !isValid}><div className="pr-5"></div>Send Message<div className="pl-5"></div></button>
                                             </div>
                                         </div> 
                                     </div>
