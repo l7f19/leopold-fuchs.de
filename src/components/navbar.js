@@ -42,11 +42,13 @@ export default function Navbar() {
                         setisActive(!isActive)
                     }}
                     role="button"
+                    tabIndex={0}
                     className={`navbar-burger ${
                         isActive ? "is-active" : ""
                     }`}
                     aria-label="menu"
                     aria-expanded="false"
+                    aria-hidden="true"
                     data-target="navMenu"
                 >
                     <span aria-hidden="true"></span>

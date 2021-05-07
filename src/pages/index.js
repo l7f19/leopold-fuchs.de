@@ -12,7 +12,7 @@ export default function Home({ data }) {
                     <div className="hero-body">
                         <div class="container has-text-centered">
                             <p className="title is-1 pb-6 pt-6">
-                                Hi! I'm Leopold, a computer science student based in Stuttgart, Germany.
+                                Hi! I'm Leopold,<br/>a computer science student based in Stuttgart, Germany.
                             </p>
                             <p className="title is-2 mt-6">
                                 As a corporate student I'm ...
@@ -51,10 +51,14 @@ export default function Home({ data }) {
                                 I'm interested in fullstack web/app development and thereby mainly working with following technologies:
                             </p>
                             <div className="tags is-justify-content-center">
-                                <span className="tag is-primary is-light is-large mx-4">React (Native)</span>
+                                <span className="tag is-primary is-light is-large mx-4">React</span>
+                                <span className="tag is-primary is-light is-large mx-4">React Native</span>
                                 <span className="tag is-primary is-light is-large mx-4">Gatsby</span>
+                                <span className="tag is-primary is-light is-large mx-4">Next.js</span>
                                 <span className="tag is-primary is-light is-large mx-4">Node.js + Express</span>
                                 <span className="tag is-primary is-light is-large mx-4">MongoDB</span>
+                                <span className="tag is-primary is-light is-large mx-4 mt-3">Bulma CSS</span>
+                                <span className="tag is-primary is-light is-large mx-4 mt-3">Material UI</span>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "leopold-fuchs.de",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A personal portfolio website for me",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

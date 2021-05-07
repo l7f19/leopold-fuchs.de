@@ -73,8 +73,8 @@ export default function Contact() {
                                     <Textfield label="Subject" type="text" name="subject" placeholder="e.g. My message to you" />
                                     <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello world" />
                                     <div class="field pt-2">
-                                        <label class="checkbox">
-                                            <Field type="checkbox" name="accept" className="mr-3" />I agree to the <a href="/privacy" target="_blank">privacy policy</a>
+                                        <label class="checkbox" htmlFor="cb">
+                                            <Field type="checkbox" name="accept" className="mr-3" id="cb" />I agree to the <a href="/privacy" target="_blank">privacy policy</a>
                                         </label>
                                         <p class="help is-danger"><ErrorMessage name="accept" /></p>
                                     </div>
@@ -92,7 +92,7 @@ export default function Contact() {
                 </div>
             </div>
             <div className={`modal ${modalActive ? "is-active" : ""}`}>
-                <div className="modal-background" onClick={() => setModalActive(false)}></div>
+                <div className="modal-background" aria-hidden="true" onClick={() => setModalActive(false)}></div>
                 <div className="modal-card">
                     <header className="modal-card-head">
                         <p className="modal-card-title">Success</p>

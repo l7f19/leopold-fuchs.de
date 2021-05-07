@@ -20,6 +20,7 @@ export default function Cv({ data }) {
                 <div className="container py-5">
                     <div className="columns is-centered">
                         <div className="column is-half">
+                        
                             <div class="timeline">
                                 <header class="timeline-header">
                                     <span class="tag is-large is-link">Education</span>
@@ -34,6 +35,7 @@ export default function Cv({ data }) {
                                         <ul>
                                             <li>German High School Diploma (Abitur)</li>
                                             <li>GPA 1.1 (Germany)</li>
+                                            <li>Main Subjects: Math, Latin</li>
                                         </ul>  
                                     </div>
                                 </div>
@@ -42,18 +44,45 @@ export default function Cv({ data }) {
                                         <Img fixed={data.dhbw.childImageSharp.fixed} />
                                     </div>
                                     <div class="timeline-content">
-                                        <p class="heading">09/2012 - 06/2020</p>
-                                        <p>Baden-Wuerttemberg Cooperative State University Stuttgart</p>
+                                        <p class="heading">since 10/2020</p>
+                                        <p>Baden-Wuerttemberg Cooperative State University Stuttgart (DHBW)</p>
                                         <ul>
                                             <li>B.Sc. in Computer Science</li>
-                                            <li>GPA 1.1 (Germany)</li>
+                                            <li>Focus area ”Computational Data Science”</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <header class="timeline-header">
+                                <header class="timeline-header mb-4">
                                     <span class="tag is-link">Now</span>
                                 </header>
                             </div>
+
+                            <div class="timeline mt-6">
+                                <header class="timeline-header">
+                                    <span class="tag is-large is-primary">Experience</span>
+                                </header>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker is-image is-48x48">
+                                        <Img fixed={data.ibm.childImageSharp.fixed} />
+                                    </div>
+                                    <div class="timeline-content">
+                                        <p class="heading">since 09/2020</p>
+                                        <p>IBM Deutschland GmbH</p>
+                                        <ul>
+                                            <li>Corporate Student</li>
+                                            <li>Internships at </li>
+                                            <ul>
+                                                <li>Cloud Code Engine</li>
+                                                <li>Systems Performance for Linux on Z</li>
+                                            </ul>
+                                        </ul>  
+                                    </div>
+                                </div>
+                                <header class="timeline-header">
+                                    <span class="tag is-primary">Now</span>
+                                </header>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -72,6 +101,13 @@ export const query = graphql`
             }
         },
         hus: file(relativePath: {eq: "hus.png"}) {
+            childImageSharp {
+                fixed(width: 48, height: 48) {
+                    ...GatsbyImageSharpFixed
+                }
+            }
+        },
+        ibm: file(relativePath: {eq: "ibm.png"}) {
             childImageSharp {
                 fixed(width: 48, height: 48) {
                     ...GatsbyImageSharpFixed
