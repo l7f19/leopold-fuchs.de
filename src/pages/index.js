@@ -54,9 +54,10 @@ export default function Home({ data }) {
                                 <span className="tag is-primary is-light is-large mx-4">React</span>
                                 <span className="tag is-primary is-light is-large mx-4">React Native</span>
                                 <span className="tag is-primary is-light is-large mx-4">Gatsby</span>
-                                <span className="tag is-primary is-light is-large mx-4">Next.js</span>
-                                <span className="tag is-primary is-light is-large mx-4">Node.js + Express</span>
+                                <span className="tag is-primary is-light is-large mx-4">Node.js</span>
+                                <span className="tag is-primary is-light is-large mx-4">Express</span>
                                 <span className="tag is-primary is-light is-large mx-4">MongoDB</span>
+                                <span className="tag is-primary is-light is-large mx-4 mt-3">Bootstrap</span>
                                 <span className="tag is-primary is-light is-large mx-4 mt-3">Bulma CSS</span>
                                 <span className="tag is-primary is-light is-large mx-4 mt-3">Material UI</span>
                             </div>

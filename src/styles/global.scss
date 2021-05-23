@@ -6,14 +6,14 @@
 // override Bulma's global variables
 $family-sans-serif: "IBM Plex Sans", sans-serif;
 $grey-light: #D0D1CD;
-$primary: #c64d32;
-$link: #32abc6;
+$primary: #fab387;
+$link: #87CEFA;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $size-1: 4rem;
 
 // navbar
-$navbar-background-color: #000000;
+$navbar-background-color: #555555;
 $navbar-item-color: #FFFFFF;
 $navbar-height: 2.5rem;
 
@@ -57,7 +57,7 @@ $breadcrumb-item-separator-color: #363636;
 
 // footer
 $footer-padding: 2rem;
-$footer-background-color: #363636;
+$footer-background-color: #555555;
 $footer-color: #FFFFFF;
 .sticky-footer {
     position: sticky;

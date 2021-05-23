@@ -7,4 +7,5 @@ date: 2022-05-02T00:00:00+00:00
 link: https://github.com/l7f19/exercitatio
 ---
 
-Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+"Exercitatio" is an app for planning and tracking your training progress. You can create and edit a training schedule and keep track of your training sessions.<br/>
+This project is intended to let me gain practice in the area of app development.

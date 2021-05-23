@@ -76,7 +76,7 @@ export default function Navbar() {
                     <a href="https://github.com/l7f19" target="_blank" rel="noreferrer" className="pt-2 mt-2 ml-4">
                         <Img fixed={data.github.childImageSharp.fixed} alt="" />
                     </a>
-                    <a href="https://www.linkedin.com/in/leopold-fuchs-3aa52a1bb/" target="_blank" rel="noreferrer" className="pt-2 mt-2 mx-4">
+                    <a href="https://www.linkedin.com/in/leopoldfuchs" target="_blank" rel="noreferrer" className="pt-2 mt-2 mx-4">
                         <Img fixed={data.linkedin.childImageSharp.fixed} alt="" />
                     </a>
                 </div>

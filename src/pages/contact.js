@@ -68,10 +68,10 @@ export default function Contact() {
                         {({dirty, isValid})=> (
                             <Form onSubmit={submitHandler} className="columns is-centered">
                                 <div className="column is-two-thirds">
-                                    <Textfield label="Name" type="text" name="name" placeholder="e.g. Alex Smith" />
-                                    <Textfield label="E-Mail" type="text" name="mail" placeholder="e.g. alexsmith@gmail.com" />
-                                    <Textfield label="Subject" type="text" name="subject" placeholder="e.g. My message to you" />
-                                    <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello world" />
+                                    <Textfield label="Name" type="text" name="name" placeholder="e.g. John Doe" />
+                                    <Textfield label="E-Mail" type="text" name="mail" placeholder="e.g. johndoe@mail.com" />
+                                    <Textfield label="Subject" type="text" name="subject" placeholder="e.g. A message title" />
+                                    <Textfield label="Message" type="text" name="message" placeholder="e.g. Hello, world!" />
                                     <div class="field pt-2">
                                         <label class="checkbox" htmlFor="cb">
                                             <Field type="checkbox" name="accept" className="mr-3" id="cb" />I agree to the <a href="/privacy" target="_blank">privacy policy</a>
