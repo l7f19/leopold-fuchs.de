@@ -1,27 +1,27 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 
 export default function Navbar() {
     const [isActive, setisActive] = React.useState(false)
-    
+
     const data = useStaticQuery(graphql`
         query {
-            logo: file(relativePath: {eq: "logo.png"}) {
+            logo: file(relativePath: { eq: "logo.png" }) {
                 childImageSharp {
                     fixed(width: 50, height: 50) {
                         ...GatsbyImageSharpFixed
                     }
                 }
-            },
-            github: file(relativePath: {eq: "github.png"}) {
+            }
+            github: file(relativePath: { eq: "github.png" }) {
                 childImageSharp {
-                    fixed(width: 30 height: 30) {
+                    fixed(width: 30, height: 30) {
                         ...GatsbyImageSharpFixed
                     }
                 }
-            },
-            linkedin: file(relativePath: {eq: "linkedin.png"}) {
+            }
+            linkedin: file(relativePath: { eq: "linkedin.png" }) {
                 childImageSharp {
                     fixed(width: 30, height: 30) {
                         ...GatsbyImageSharpFixed
@@ -32,9 +32,13 @@ export default function Navbar() {
     `)
 
     return (
-        <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav
+            className="navbar is-fixed-top"
+            role="navigation"
+            aria-label="main navigation"
+        >
             <div className="navbar-brand m-0 p-0">
-                <Link className="ml-2 mt-1" to="/">      
+                <Link className="ml-2 mt-1" to="/">
                     <Img fixed={data.logo.childImageSharp.fixed} alt="" />
                 </Link>
                 <div
@@ -43,9 +47,7 @@ export default function Navbar() {
                     }}
                     role="button"
                     tabIndex={0}
-                    className={`navbar-burger ${
-                        isActive ? "is-active" : ""
-                    }`}
+                    className={`navbar-burger ${isActive ? "is-active" : ""}`}
                     aria-label="menu"
                     aria-expanded="false"
                     aria-hidden="true"
@@ -57,13 +59,19 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div id="navMenu" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+            <div
+                id="navMenu"
+                className={`navbar-menu ${isActive ? "is-active" : ""}`}
+            >
                 <div className="navbar-end">
                     <div className="navbar-item m4-6">
                         <Link to="/" className="navbar-item is-tab px-5">
                             Home
                         </Link>
-                        <Link to="/projects" className="navbar-item is-tab px-5">
+                        <Link
+                            to="/projects"
+                            className="navbar-item is-tab px-5"
+                        >
                             Projects
                         </Link>
                         <Link to="/cv" className="navbar-item is-tab px-5">
@@ -73,11 +81,24 @@ export default function Navbar() {
                             Contact
                         </Link>
                     </div>
-                    <a href="https://github.com/l7f19" target="_blank" rel="noreferrer" className="pt-2 mt-2 ml-4">
+                    <a
+                        href="https://github.com/l7f19"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="pt-2 mt-2 ml-4"
+                    >
                         <Img fixed={data.github.childImageSharp.fixed} alt="" />
                     </a>
-                    <a href="https://www.linkedin.com/in/leopoldfuchs" target="_blank" rel="noreferrer" className="pt-2 mt-2 mx-4">
-                        <Img fixed={data.linkedin.childImageSharp.fixed} alt="" />
+                    <a
+                        href="https://www.linkedin.com/in/leopoldfuchs"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="pt-2 mt-2 mx-4"
+                    >
+                        <Img
+                            fixed={data.linkedin.childImageSharp.fixed}
+                            alt=""
+                        />
                     </a>
                 </div>
             </div>
