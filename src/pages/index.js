@@ -55,7 +55,7 @@ export default function Home({ data }) {
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <p className="title is-2 pb-6 pt-6">
-                            On this website I want to show something{" "}
+                            Here you can find out more{" "}
                             <Link className="keyword" to="/cv">
                                 about me
                             </Link>{" "}
@@ -66,37 +66,56 @@ export default function Home({ data }) {
                             that I'm working on.
                         </p>
                         <p className="title is-3 pt-6 pb-4">
-                            I'm interested in fullstack web/app development and
-                            thereby mainly working with following technologies:
+                            I'm interested in fullstack web development +
+                            machine learning and thereby mainly working with
+                            following technologies:
                         </p>
-                        <div className="tags is-justify-content-center ml-5 mr-5">
-                            <span className="tag is-primary is-light is-large mx-4">
-                                React
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4">
-                                Gatsby
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4">
-                                Angular
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4">
-                                Node.js
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4">
-                                Express
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4">
-                                MongoDB
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4 mt-3">
-                                Bootstrap
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4 mt-3">
-                                Bulma CSS
-                            </span>
-                            <span className="tag is-primary is-light is-large mx-4 mt-3">
-                                Material UI
-                            </span>
+                        <div className="columns mt-5">
+                            <div className="column tags is-justify-content-center mb-0">
+                                <div className="icon-center">
+                                    <span className="tag is-primary is-light is-large mx-4">
+                                        Angular
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4">
+                                        React
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4">
+                                        Gatsby
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        Node.js
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        Express.js
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        MongoDB
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        Bootstrap
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        Bulma CSS
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="column tags is-justify-content-center">
+                                <div className="icon-center">
+                                    <span className="tag is-primary is-light is-large mx-4">
+                                        Python
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4">
+                                        scikit-learn
+                                    </span>
+                                    <br />
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        TensorFlow
+                                    </span>
+                                    <span className="tag is-primary is-light is-large mx-4 mt-3">
+                                        PyTorch
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

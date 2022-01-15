@@ -51,20 +51,25 @@ export default function Projects({ data }) {
                                                         }
                                                     </p>
                                                 </div>
-                                                <div className="column">
+                                                <div className="column icon-wrapper">
                                                     <a
                                                         href={
-                                                            project.frontmatter
-                                                                .link
+                                                            project.frontmatter.repo ?
+                                                            project.frontmatter.repo :
+                                                            project.frontmatter.link
                                                         }
-                                                        alt="GitHub"
+                                                        alt="Link"
                                                         target="_blank"
                                                         rel="noreferrer"
                                                     >
                                                         <Img
-                                                            className="mt-3"
+                                                            className="icon-center"
                                                             fixed={
-                                                                data.icon
+                                                                project.frontmatter.repo ?
+                                                                data.githubIcon
+                                                                    .childImageSharp
+                                                                    .fixed :
+                                                                data.externalLinkIcon
                                                                     .childImageSharp
                                                                     .fixed
                                                             }
@@ -141,14 +146,22 @@ export const query = graphql`
                     type
                     progress
                     date
+                    repo
                     link
                 }
                 id
             }
         }
-        icon: file(relativePath: { eq: "github.png" }) {
+        githubIcon: file(relativePath: { eq: "github.png" }) {
             childImageSharp {
-                fixed(width: 48, height: 48) {
+                fixed(width: 40, height: 40) {
+                    ...GatsbyImageSharpFixed
+                }
+            }
+        }
+        externalLinkIcon: file(relativePath: { eq: "link.png" }) {
+            childImageSharp {
+                fixed(width: 24, height: 24) {
                     ...GatsbyImageSharpFixed
                 }
             }

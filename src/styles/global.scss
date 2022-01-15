@@ -27,6 +27,18 @@ $breadcrumb-item-separator-color: #424242;
     text-decoration: underline;
 }
 
+// Projects
+.icon-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-wrapper {
+    display: flex;
+    text-align: center;
+}
+
 // icon sizes
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }

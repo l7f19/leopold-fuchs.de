@@ -91,7 +91,7 @@ export default function Contact() {
                                 onSubmit={submitHandler}
                                 className="columns is-centered"
                             >
-                                <div className="column is-two-thirds">
+                                <div className="column is-half">
                                     <Textfield
                                         label="Name"
                                         type="text"

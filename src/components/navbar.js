@@ -16,14 +16,14 @@ export default function Navbar() {
             }
             github: file(relativePath: { eq: "github.png" }) {
                 childImageSharp {
-                    fixed(width: 30, height: 30) {
+                    fixed(width: 24, height: 24) {
                         ...GatsbyImageSharpFixed
                     }
                 }
             }
             linkedin: file(relativePath: { eq: "linkedin.png" }) {
                 childImageSharp {
-                    fixed(width: 30, height: 30) {
+                    fixed(width: 24, height: 24) {
                         ...GatsbyImageSharpFixed
                     }
                 }
@@ -85,19 +85,24 @@ export default function Navbar() {
                         href="https://github.com/l7f19"
                         target="_blank"
                         rel="noreferrer"
-                        className="pt-2 mt-2 ml-4"
+                        className="ml-4"
                     >
-                        <Img fixed={data.github.childImageSharp.fixed} alt="" />
+                        <Img
+                            fixed={data.github.childImageSharp.fixed}
+                            alt="GitHub"
+                            className="icon-center"
+                        />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/leopoldfuchs"
                         target="_blank"
                         rel="noreferrer"
-                        className="pt-2 mt-2 mx-4"
+                        className="mx-4"
                     >
                         <Img
                             fixed={data.linkedin.childImageSharp.fixed}
-                            alt=""
+                            alt="LinkedIn"
+                            className="icon-center"
                         />
                     </a>
                 </div>

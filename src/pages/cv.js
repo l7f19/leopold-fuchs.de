@@ -49,7 +49,7 @@ export default function Cv({ data }) {
                                                 German High School Diploma
                                                 (Abitur)
                                             </li>
-                                            <li>GPA 1.1 (Germany)</li>
+                                            <li>GPA: 1.1 (Germany)</li>
                                             <li>Main Subjects: Math, Latin</li>
                                         </ul>
                                     </div>
@@ -70,6 +70,7 @@ export default function Cv({ data }) {
                                         </p>
                                         <ul className="has-text-left">
                                             <li>B.Sc. in Computer Science</li>
+                                            <li>current GPA: 1.4 (Germany)</li>
                                             <li>
                                                 Focus area ”Computational Data
                                                 Science”
@@ -103,8 +104,9 @@ export default function Cv({ data }) {
                                             <li>Corporate Student</li>
                                             <li>Internships at </li>
                                             <ul>
-                                                <li>IBM Cloud Code Engine</li>
-                                                <li>IBM Systems Performance</li>
+                                                <li>IBM Cloud - Code Engine</li>
+                                                <li>IBM Systems - Performance for Linux on Z</li>
+                                                <li>IBM Consulting - GBS Watson IoT Practice</li>
                                             </ul>
                                         </ul>
                                     </div>
